@@ -1,0 +1,48 @@
+{
+    "parserOptions": {
+        "project": "tsconfig.json",
+        "sourceType": "module"
+    },
+    "plugins": [
+        "@typescript-eslint",
+        "unused-imports",
+        "unicorn",
+        "deprecation"
+    ],
+    "extends": [
+        "eslint:recommended",
+        "plugin:@typescript-eslint/eslint-recommended",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:@typescript-eslint/recommended-requiring-type-checking",
+        "plugin:prettier/recommended",
+        "plugin:unicorn/recommended",
+        "eslint-config-prettier"
+    ],
+    "rules": {
+        "no-console": "error",
+
+        "unicorn/no-null": "off",
+        "unicorn/prefer-module": "off",
+        "unicorn/no-process-exit": "off",
+        "unicorn/no-useless-undefined": "off",
+        "unicorn/no-array-callback-reference": "off",
+        "unicorn/no-array-method-this-argument": "off",
+
+        // unused-imports rules
+        "no-unused-vars": "off",
+        "@typescript-eslint/no-unused-vars": "off",
+        "unused-imports/no-unused-imports": "error",
+        "unused-imports/no-unused-vars": [
+            "warn",
+            {
+                "vars": "all",
+                "varsIgnorePattern": "^_",
+                "args": "after-used",
+                "argsIgnorePattern": "^_"
+            }
+        ],
+
+        // warn deprecation
+        "deprecation/deprecation": "error"
+    }
+}

@@ -1,0 +1,9 @@
+/dist
+/.parcel-cache
+/.vscode
+
+node_modules
+
+.env*
+
+.DS_Store
